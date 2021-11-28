@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DinnerSelectionRandomiser.Views.MainPage"
+             Title="Whats For Dinner?">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="OnSaveClicked"/>
+        <ToolbarItem Text="Randomise" Clicked="OnRandomiseClicked"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Margin="{StaticResource PageMargin}" Padding="10,0,10,10" Spacing="13" VerticalOptions="End">
+
+        <Grid ColumnDefinitions="130" RowDefinitions="60">
+            <Label Text="Saturday" FontSize="Large" Grid.Row="0" Grid.Column="0" TextColor="White" VerticalTextAlignment="Center"/>
+            <Button Text="{Binding [0]}" FontSize="Medium" Grid.Row="0" Grid.Column="1" TextColor="White" Background="Black" Clicked="OnSatClicked"/>
+        </Grid>
+        <Grid ColumnDefinitions="130" RowDefinitions="60">
+            <Label Text="Sunday" FontSize="Large" Grid.Row="0" Grid.Column="0" TextColor="White" VerticalTextAlignment="Center"/>
+            <Button Text="{Binding [1]}" FontSize="Medium" Grid.Row="0" Grid.Column="1" TextColor="White"  Background="Black" Clicked="OnSunClicked"/>
+        </Grid>
+        <Grid ColumnDefinitions="130" RowDefinitions="60">
+            <Label Text="Monday" FontSize="Large" Grid.Row="0" Grid.Column="0" TextColor="White" VerticalTextAlignment="Center"/>
+            <Button Text="{Binding [2]}" FontSize="Medium" Grid.Row="0" Grid.Column="1" TextColor="White"  Background="Black" Clicked="OnMonClicked"/>
+        </Grid>
+        <Grid ColumnDefinitions="130" RowDefinitions="60">
+            <Label Text="Tuesday" FontSize="Large" Grid.Row="0" Grid.Column="0" TextColor="White" VerticalTextAlignment="Center"/>
+            <Button Text="{Binding [3]}" FontSize="Medium" Grid.Row="0" Grid.Column="1" TextColor="White"  Background="Black" Clicked="OnTueClicked"/>
+        </Grid>
+        <Grid ColumnDefinitions="130" RowDefinitions="60">
+            <Label Text="Wednesday" FontSize="Large" Grid.Row="0" Grid.Column="0" TextColor="White" VerticalTextAlignment="Center"/>
+            <Button Text="{Binding [4]}" FontSize="Medium" Grid.Row="0" Grid.Column="1" TextColor="White"  Background="Black" Clicked="OnWedClicked"/>
+        </Grid>
+        <Grid ColumnDefinitions="130" RowDefinitions="60">
+            <Label Text="Thursday" FontSize="Large" Grid.Row="0" Grid.Column="0" TextColor="White" VerticalTextAlignment="Center"/>
+            <Button Text="{Binding [5]}" FontSize="Medium" Grid.Row="0" Grid.Column="1" TextColor="White"  Background="Black" Clicked="OnThurClicked"/>
+        </Grid>
+        <Grid ColumnDefinitions="130" RowDefinitions="60">
+            <Label Text="Friday" FontSize="Large" Grid.Row="0" Grid.Column="0" TextColor="White" VerticalTextAlignment="Center"/>
+            <Button Text="{Binding [6]}" FontSize="Medium" Grid.Row="0" Grid.Column="1" TextColor="White"  Background="Black" Clicked="OnFriClicked"/>
+        </Grid>
+        <Grid ColumnDefinitions="220" RowDefinitions="50">
+            <Button Text="Ingredients for this week" FontSize="Small" Grid.Row="0" Grid.Column="0" Clicked="OnIngredientsClicked"/>
+            <Button x:Name="SeasonButton" Text="" FontSize="Small" Grid.Row="0" Grid.Column="1" Clicked="OnSeasonClicked"/>
+        </Grid>
+    </StackLayout>    
+
+</ContentPage>
+

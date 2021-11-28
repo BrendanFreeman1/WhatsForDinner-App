@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DinnerSelectionRandomiser.Views.AddDinnersPage"
+             Title="Dinner Entry">
+
+    <ScrollView>
+        <StackLayout Margin="{StaticResource PageMargin}">
+            <Label Text="Dinner:" TextColor="Gray" FontSize="Small" Padding="0,0,0,0"></Label>
+            <Editor Placeholder="Enter your dinner"
+                    PlaceholderColor="{StaticResource SecondaryColor}"
+                    TextColor="{StaticResource PrimaryColor}"
+                    Text="{Binding Text}"
+                    HeightRequest="50" />
+
+            <Label Text="Dinner Type:" TextColor="Gray" FontSize="Small" Padding="0,20,0,0"></Label>
+            <Picker x:Name="picker"
+                Title="Select a type for this Dinner"                
+                TitleColor="Gray"
+                TextColor="White"
+                SelectedItem="{Binding Type}">
+                <Picker.Items>
+                    <x:String>Chicken</x:String>
+                    <x:String>Italian</x:String>
+                    <x:String>Asian</x:String>
+                    <x:String>Soup</x:String>
+                    <x:String>Salad</x:String>
+                    <x:String>Roast</x:String>
+                    <x:String>Burger</x:String>
+                    <x:String>Mexican</x:String>
+                    <x:String>Weekend</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Main Ingredient:" TextColor="Gray" FontSize="Small" Padding="0,0,0,0"></Label>
+            <Picker x:Name="pickerTwo"
+                Title="Select a main ingredient"                
+                TitleColor="Gray"
+                TextColor="White"
+                SelectedItem="{Binding MainIngredient}">
+                <Picker.Items>
+                    <x:String>Chicken</x:String>
+                    <x:String>Redmeat</x:String>
+                    <x:String>Mince</x:String>
+                    <x:String>Bacon</x:String>
+                    <x:String>Vegetable</x:String>
+                    <x:String>Lamb</x:String>
+                    <x:String>Pork</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Ingredients:" TextColor="Gray" FontSize="Small" Padding="0,20,0,0"></Label>
+            <Editor Placeholder="Enter this dinners ingredients"
+                        PlaceholderColor="{StaticResource SecondaryColor}"
+                        TextColor="{StaticResource PrimaryColor}"
+                        Text="{Binding Ingredients}"
+                        HeightRequest="100" />
+
+            <Grid ColumnDefinitions="*,*" >
+                <Button Text="Save"
+                            Clicked="OnSaveButtonClicked" />
+                <Button Grid.Column="1"
+                            Text="Delete"
+                            Clicked="OnDeleteButtonClicked"/>
+            </Grid>
+
+            <Label Text="Recipe:" TextColor="Gray" FontSize="Small" Padding="0,20,0,0"></Label>
+            <Editor     x:Name="RecipeEditor" Placeholder="Enter a website for this dinners recipe"
+                        PlaceholderColor="{StaticResource SecondaryColor}"
+                        TextColor="{StaticResource PrimaryColor}"
+                        Text="{Binding Recipe}"
+                        HeightRequest="75" />
+
+
+            <Button x:Name="GoToRecipeButton"  Text="Go To Recipe" Command="{Binding OpenWebCommand}" TextColor="White" />
+            <Label Text="" Padding="0,0,0,0"></Label>
+
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

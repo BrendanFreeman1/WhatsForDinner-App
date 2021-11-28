@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DinnerSelectionRandomiser.Views.IngredientsPage"
+             Title="Ingredients for this week">
+    
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+            <Grid HorizontalOptions="CenterAndExpand"
+                  VerticalOptions="CenterAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="140" />
+                    <ColumnDefinition Width="220" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Saturday" FontSize="Large" Grid.Row="0" Grid.Column="0" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [0]}" FontSize="Small" Grid.Row="0" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+
+                <Label Text="Sunday" FontSize="Large" Grid.Row="1" Grid.Column="0" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [1]}" FontSize="Small" Grid.Row="1" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+
+                <Label Text="Monday" FontSize="Large" Grid.Row="2" Grid.Column="0" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [2]}" FontSize="Small" Grid.Row="2" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+
+                <Label Text="Tuesday" FontSize="Large" Grid.Row="3" Grid.Column="0" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [3]}" FontSize="Small" Grid.Row="3" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+
+                <Label Text="Wednesday" FontSize="Large" Grid.Row="4" Grid.Column="0" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [4]}" FontSize="Small" Grid.Row="4" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+
+                <Label Text="Thursday" FontSize="Large" Grid.Row="5" Grid.Column="0" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [5]}" FontSize="Small" Grid.Row="5" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+
+                <Label Text="Friday" FontSize="Large" Grid.Row="6" Grid.Column="0" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [6]}" FontSize="Small" Grid.Row="6" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>
