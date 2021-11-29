@@ -55,45 +55,37 @@ namespace DinnerSelectionRandomiser.Views
 
             int dayOfTheWeek = 0;
             Dinner newDinner;
-
             dinners.Clear();
             dinnersNames.Clear();
 
             while (dayOfTheWeek < 7)
             {
-                if (allDinnersList.Count == 0) break;
+                //Will break out of loop when dinners run out
+                if (allDinnersList.Count == 0) break; 
 
-                newDinner = GetRandomDinner(dayOfTheWeek);                
+                //Get Random Dinner
+                newDinner = GetRandomDinner(dayOfTheWeek);         
+                
+                //If the current dinner didn't pass the filter, start loop again
                 if(newDinner == null) continue;
 
                 dinners.Add(newDinner);
                 dinnersNames.Add(newDinner.Text);
+                allDinnersList.Remove(newDinner);
                 dayOfTheWeek++;
             }
 
             SetBinding();
         }
 
-        //Is Driving allDinnersList.Count to 0 
-        void RandomiseSingleDinner(int dayOfTheWeek)
-        {
-            if (dinners.Count < 7) return;
-
-            Dinner newDinner = GetRandomDinner(dayOfTheWeek);
-            if (newDinner == null) return;
-
-            dinners[dayOfTheWeek] = newDinner;
-            dinnersNames[dayOfTheWeek] = newDinner.Text;
-            SetBinding();
-        }
-
         Dinner GetRandomDinner(int dayOfTheWeek)
         {            
-            int randomIndex = 0;
+            int randomIndex;
             Dinner newDinner = null;
 
             while (newDinner == null)
             {
+                //Will break out of loop when dinners run out
                 if (allDinnersList.Count == 0) break;
 
                 randomIndex = rnd.Next(0, allDinnersList.Count);
@@ -120,26 +112,8 @@ namespace DinnerSelectionRandomiser.Views
                 return true;
             }
 
-            //If the current Dinner has the same Main ingredient as the previous Dinner, Get a new one
-            //Dont want to remove from the list!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            if (dayOfTheWeek > 0)
-            {
-                if (newDinner.MainIngredient == dinners[dayOfTheWeek - 1].MainIngredient)
-                {
-                    allDinnersList.Remove(newDinner);
-                    return true; ;
-                }
-            }
-
             for (int i = 0; i < dinners.Count; i++)
             {
-                //If the current Dinner is a repeat, Get a new one
-                if (newDinner.Text == dinners[i].Text)
-                {
-                    allDinnersList.Remove(newDinner);
-                    return true;
-                }
-
                 //If the current Dinner is the same type as a previous dinner in the list, Get a new one
                 if (newDinner.Type == dinners[i].Type)
                 {
@@ -149,6 +123,19 @@ namespace DinnerSelectionRandomiser.Views
             }
 
             return false;
+        }
+
+        void RandomiseSingleDinner(int dayOfTheWeek)
+        {
+            //If the dinners list isn't fully populated, the database is empty, do nothing
+            if (dinners.Count < 7) return;
+
+            int randomIndex = rnd.Next(0, allDinnersList.Count);
+            Dinner newDinner = allDinnersList[randomIndex];
+
+            dinners[dayOfTheWeek] = newDinner;
+            dinnersNames[dayOfTheWeek] = newDinner.Text;
+            SetBinding();
         }
         #endregion
 
@@ -192,7 +179,7 @@ namespace DinnerSelectionRandomiser.Views
         #region Season
         void SetSeason()
         {
-            //Set the IsWinter Bool
+            //Set the season
             if (DateTime.Today.Month <= 2 || DateTime.Today.Month >= 9) //Spring and Summer
             {
                 season = "SUMMER";
@@ -201,7 +188,7 @@ namespace DinnerSelectionRandomiser.Views
             else // Autumn and Winter
             {
                 season = "WINTER";
-                SeasonButton.Text = "Season";
+                SeasonButton.Text = season;
             }
         }
 

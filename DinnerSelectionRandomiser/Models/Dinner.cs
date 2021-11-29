@@ -10,10 +10,8 @@ namespace DinnerSelectionRandomiser.Models
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
-        public bool HadLastWeek { get; set; }
         public string Text { get; set; }
         public string Type{ get; set; }
-        public string MainIngredient { get; set; }
         public string Ingredients { get; set; }
         public string Recipe { get; set; }
         

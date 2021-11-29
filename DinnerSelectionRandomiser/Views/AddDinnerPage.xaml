@@ -15,7 +15,7 @@
 
             <Label Text="Dinner Type:" TextColor="Gray" FontSize="Small" Padding="0,20,0,0"></Label>
             <Picker x:Name="picker"
-                Title="Select a type for this Dinner"                
+                Title="Only one of a type is selected each week"                
                 TitleColor="Gray"
                 TextColor="White"
                 SelectedItem="{Binding Type}">
@@ -29,23 +29,6 @@
                     <x:String>Burger</x:String>
                     <x:String>Mexican</x:String>
                     <x:String>Weekend</x:String>
-                </Picker.Items>
-            </Picker>
-
-            <Label Text="Main Ingredient:" TextColor="Gray" FontSize="Small" Padding="0,0,0,0"></Label>
-            <Picker x:Name="pickerTwo"
-                Title="Select a main ingredient"                
-                TitleColor="Gray"
-                TextColor="White"
-                SelectedItem="{Binding MainIngredient}">
-                <Picker.Items>
-                    <x:String>Chicken</x:String>
-                    <x:String>Redmeat</x:String>
-                    <x:String>Mince</x:String>
-                    <x:String>Bacon</x:String>
-                    <x:String>Vegetable</x:String>
-                    <x:String>Lamb</x:String>
-                    <x:String>Pork</x:String>
                 </Picker.Items>
             </Picker>
 
