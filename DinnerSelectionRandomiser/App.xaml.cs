@@ -38,7 +38,7 @@ namespace DinnerSelectionRandomiser
             {
 
                 //Soup
-                new Dinner { ID = 0, Text = "Pumpkin Soup", Type = "Soup", Ingredients = "Pumpkin, Garlic, Onion, Cream, Stock", Recipe = "https://www.sbs.com.au/food/recipes/pumpkin-soup" },
+                new Dinner { ID = 0, Text = "Pumpkin Soup", Type = "Soup", Ingredients = " Pumpkin, Garlic, Onion, Cream, Stock", Recipe = "https://www.sbs.com.au/food/recipes/pumpkin-soup" },
                 new Dinner { ID = 0, Text = "Tomato Soup", Type = "Soup", Ingredients = "Tin Tomatoes, Tomato Paste, Garlic, Onion, Thickener(Beans or Potato), Stock", Recipe = "https://www.bbcgoodfood.com/recipes/tomato-soup" },
                 new Dinner { ID = 0, Text = "Chicken Soup", Type = "Soup", Ingredients = "Whole Chicken, Carrots, Celery, Onion, Garlic, Stock", Recipe = "https://www.marthastewart.com/336138/basic-chicken-soup" },
                 new Dinner { ID = 0, Text = "Leek and Potato Soup", Type = "Soup", Ingredients = "Leek, Potato, Garlic, Butter, Stock, Cream", Recipe = "https://www.recipetineats.com/leek-and-potato-soup/" },
