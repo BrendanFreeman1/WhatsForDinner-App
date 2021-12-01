@@ -33,7 +33,7 @@
             </Picker>
 
             <Label Text="Ingredients:" TextColor="Gray" FontSize="Small" Padding="0,20,0,0"></Label>
-            <Editor Placeholder="Enter this dinners ingredients"
+            <Editor Placeholder="Enter ingredients. Seperate each by a comma"
                         PlaceholderColor="{StaticResource SecondaryColor}"
                         TextColor="{StaticResource PrimaryColor}"
                         Text="{Binding Ingredients}"

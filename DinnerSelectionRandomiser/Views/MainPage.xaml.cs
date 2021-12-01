@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using DinnerSelectionRandomiser.Models;
@@ -162,17 +161,25 @@ namespace DinnerSelectionRandomiser.Views
         #region Ingredients
         void OnIngredientsClicked(object sender, EventArgs e)
         {
-            //Ingredients arent saved to file. A smart system where a list or string is constructed for the weeks ingredients would condence the ingredients listing and allow for saving to file
+            //Navigate to the Ingredients Page, Passing through the 'shoppingList' List
+            Navigation.PushAsync(new IngredientsPage(CreateIngredientsList()));            
+        }
 
-            List<string> dinnersIngredients = new List<string>();
+        List<string> CreateIngredientsList()
+        {
+            List<string> shoppingList = new List<string>();
 
             foreach (Dinner dinner in dinners)
             {
-                dinnersIngredients.Add(dinner.Ingredients);
+                List<string> dinnerIngredients = dinner.Ingredients.Split(',').ToList();
+
+                foreach (string ingredient in dinnerIngredients)
+                {
+                    shoppingList.Add(ingredient);         
+                }
             }
 
-            //Navigate to the IngredientsPage, Passing through the 'DinnersIngredients' List
-            Navigation.PushAsync(new IngredientsPage(dinnersIngredients));
+            return shoppingList;
         }
         #endregion
 

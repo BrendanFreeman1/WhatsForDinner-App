@@ -6,10 +6,10 @@ namespace DinnerSelectionRandomiser.Views
 {
     public partial class IngredientsPage : ContentPage, INotifyPropertyChanged
     {
-        public IngredientsPage(List<string> DinnersIngredients)
+        public IngredientsPage(List<string> ShoppingList)
         {
             InitializeComponent();
-            BindingContext = DinnersIngredients;
+            BindingContext = ShoppingList;
         }
     }
 }

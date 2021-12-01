@@ -36,9 +36,8 @@ namespace DinnerSelectionRandomiser
             List<Dinner> DatabaseList = await Database.GetDinnerAsync();
             List<Dinner> AllDinnersList = new List<Dinner>
             {
-
                 //Soup
-                new Dinner { ID = 0, Text = "Pumpkin Soup", Type = "Soup", Ingredients = " Pumpkin, Garlic, Onion, Cream, Stock", Recipe = "https://www.sbs.com.au/food/recipes/pumpkin-soup" },
+                new Dinner { ID = 0, Text = "Pumpkin Soup", Type = "Soup", Ingredients = "Pumpkin, Garlic, Onion, Cream, Stock", Recipe = "https://www.sbs.com.au/food/recipes/pumpkin-soup" },
                 new Dinner { ID = 0, Text = "Tomato Soup", Type = "Soup", Ingredients = "Tin Tomatoes, Tomato Paste, Garlic, Onion, Thickener(Beans or Potato), Stock", Recipe = "https://www.bbcgoodfood.com/recipes/tomato-soup" },
                 new Dinner { ID = 0, Text = "Chicken Soup", Type = "Soup", Ingredients = "Whole Chicken, Carrots, Celery, Onion, Garlic, Stock", Recipe = "https://www.marthastewart.com/336138/basic-chicken-soup" },
                 new Dinner { ID = 0, Text = "Leek and Potato Soup", Type = "Soup", Ingredients = "Leek, Potato, Garlic, Butter, Stock, Cream", Recipe = "https://www.recipetineats.com/leek-and-potato-soup/" },
@@ -60,14 +59,14 @@ namespace DinnerSelectionRandomiser
                 new Dinner { ID = 0, Text = "Pesto Gnocchi", Type = "Italian", Ingredients = "Gnocchi, Garlic, Basil Pesto, Cream" },
                 new Dinner { ID = 0, Text = "Cream Gnocchi", Type = "Italian", Ingredients = "Gnocchi, Bacon, Cream, Cheese" },
                 new Dinner { ID = 0, Text = "Sweet Potato Gnocchi", Type = "Italian", Ingredients = "Gnocchi, Parmesan, Milk, Sweet Potato, Spinach, Cinnamon, Chickpeas, Ricotta, Sage, Garlic", Recipe = "https://www.woolworths.com.au/shop/recipes/gnocchi-with-sweet-potato-sauce" },
-                
+
                 new Dinner { ID = 0, Text = "Chicken Risotto", Type = "Italian", Ingredients = "Chicken, Stock, Butter, Onion, Garlic, Arborio Rice", Recipe = "" },
                 new Dinner { ID = 0, Text = "Tomato Risotto", Type = "Italian", Ingredients = "Tin Tomatoes, Veg Stock, Butter, Onion, Garlic, Rosemary, Arborio Rice, Cherry Tomatoes, Basil, Parmesan", Recipe = "https://www.bbcgoodfood.com/recipes/creamy-tomato-risotto" },
                 new Dinner { ID = 0, Text = "Bacon Thyme Risotto", Type = "Italian", Ingredients = "Bacon, Stock, Butter, Onion, Garlic, Thyme, Arborio Rice", Recipe = "https://www.delish.com/cooking/recipe-ideas/a24280714/instant-pot-risotto/" },
 
                 //Asian
                 new Dinner { ID = 0, Text = "Honey Chicken", Type = "Asian", Ingredients = "Chicken, Honey, Rice, Soy Sauce, Eggs, Lemon, Sesame Oil", Recipe = "https://www.youtube.com/watch?v=NqwW4BiLoBw" },
-                new Dinner { ID = 0, Text = "Satay Chicken", Type = "Asian", Ingredients = "Chicken, Peanut Butter, Rice, Onion, Garlic, Soy Sauce, Coconut Milk" },                
+                new Dinner { ID = 0, Text = "Satay Chicken", Type = "Asian", Ingredients = "Chicken, Peanut Butter, Rice, Onion, Garlic, Soy Sauce, Coconut Milk" },
                 new Dinner { ID = 0, Text = "Chicken Stirfry", Type = "Asian", Ingredients = "Chicken, Noodles or Rice, Onion, Beans or Peas, Capsicum, Soy Sauce, Sesame Oil, Shallots" },
 
                 //Burger
@@ -101,17 +100,17 @@ namespace DinnerSelectionRandomiser
                 new Dinner { ID = 0, Text = "Tacos", Type = "Mexican", Ingredients = "Mince, Taco Shells, Tin Tomatoes, Tomato Paste, Onion, Garlic, Carrot, Cheese" },
                 new Dinner { ID = 0, Text = "Fajitas", Type = "Mexican", Ingredients = "Chicken, Wraps, Capsicum, Onion, Garlic, Cheese" },
                 new Dinner { ID = 0, Text = "Enchiladas", Type = "Mexican", Ingredients = "Mince, Wraps, Tin Tomatoes, Tomato Paste, Capsicum, Onion, Garlic, Cheese" }
-            };
+        };
 
-
+            
             foreach (Dinner dinner in AllDinnersList)
             {
-                //IF this dinner is already in the database, skip it.
+                //If this dinner is already in the database, skip it.
                 if (!IsAlreadyInDatabase(DatabaseList, dinner))
                 {
                     await database.SaveDinnerAsync(dinner);
                 }
-            }             
+            } 
         }
 
         bool IsAlreadyInDatabase(List<Dinner> DatabaseList, Dinner dinner)

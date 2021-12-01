@@ -2,7 +2,6 @@
 using Xamarin.Essentials;
 using SQLite;
 using System.Collections.Generic;
-using System;
 
 namespace DinnerSelectionRandomiser.Models
 {

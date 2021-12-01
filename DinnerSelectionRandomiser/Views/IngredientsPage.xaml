@@ -2,48 +2,66 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DinnerSelectionRandomiser.Views.IngredientsPage"
-             Title="Ingredients for this week">
+             Title="Shopping List">
     
     <ContentPage.Content>
-        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-
-            <Grid HorizontalOptions="CenterAndExpand"
-                  VerticalOptions="CenterAndExpand">
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="80"/>
-                    <RowDefinition Height="80"/>
-                    <RowDefinition Height="80"/>
-                    <RowDefinition Height="80"/>
-                    <RowDefinition Height="80"/>
-                    <RowDefinition Height="80"/>
-
-                </Grid.RowDefinitions>
+        <StackLayout>
+            <Grid Margin="25,30,0,40">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="140" />
-                    <ColumnDefinition Width="220" />
+                    <ColumnDefinition Width="40" />
+                    <ColumnDefinition Width="150" />
                 </Grid.ColumnDefinitions>
 
-                <Label Text="Saturday" FontSize="Large" Grid.Row="0" Grid.Column="0" TextColor="{StaticResource PrimaryColor}"/>
-                <Label Text="{Binding [0]}" FontSize="Small" Grid.Row="0" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
-
-                <Label Text="Sunday" FontSize="Large" Grid.Row="1" Grid.Column="0" TextColor="{StaticResource PrimaryColor}"/>
-                <Label Text="{Binding [1]}" FontSize="Small" Grid.Row="1" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
-
-                <Label Text="Monday" FontSize="Large" Grid.Row="2" Grid.Column="0" TextColor="{StaticResource PrimaryColor}"/>
-                <Label Text="{Binding [2]}" FontSize="Small" Grid.Row="2" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
-
-                <Label Text="Tuesday" FontSize="Large" Grid.Row="3" Grid.Column="0" TextColor="{StaticResource PrimaryColor}"/>
-                <Label Text="{Binding [3]}" FontSize="Small" Grid.Row="3" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
-
-                <Label Text="Wednesday" FontSize="Large" Grid.Row="4" Grid.Column="0" TextColor="{StaticResource PrimaryColor}"/>
-                <Label Text="{Binding [4]}" FontSize="Small" Grid.Row="4" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
-
-                <Label Text="Thursday" FontSize="Large" Grid.Row="5" Grid.Column="0" TextColor="{StaticResource PrimaryColor}"/>
-                <Label Text="{Binding [5]}" FontSize="Small" Grid.Row="5" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
-
-                <Label Text="Friday" FontSize="Large" Grid.Row="6" Grid.Column="0" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [0]}" FontSize="Small" Grid.Row="0" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>                
+                <Label Text="{Binding [1]}" FontSize="Small" Grid.Row="1" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>                
+                <Label Text="{Binding [2]}" FontSize="Small" Grid.Row="2" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>                
+                <Label Text="{Binding [3]}" FontSize="Small" Grid.Row="3" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>                
+                <Label Text="{Binding [4]}" FontSize="Small" Grid.Row="4" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>                
+                <Label Text="{Binding [5]}" FontSize="Small" Grid.Row="5" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>                
                 <Label Text="{Binding [6]}" FontSize="Small" Grid.Row="6" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [7]}" FontSize="Small" Grid.Row="7" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [8]}" FontSize="Small" Grid.Row="8" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [9]}" FontSize="Small" Grid.Row="9" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [10]}" FontSize="Small" Grid.Row="10" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [11]}" FontSize="Small" Grid.Row="11" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [12]}" FontSize="Small" Grid.Row="12" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [13]}" FontSize="Small" Grid.Row="13" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [14]}" FontSize="Small" Grid.Row="14" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [15]}" FontSize="Small" Grid.Row="15" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [16]}" FontSize="Small" Grid.Row="16" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [17]}" FontSize="Small" Grid.Row="17" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [18]}" FontSize="Small" Grid.Row="18" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [19]}" FontSize="Small" Grid.Row="19" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [20]}" FontSize="Small" Grid.Row="20" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [21]}" FontSize="Small" Grid.Row="21" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [22]}" FontSize="Small" Grid.Row="22" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [23]}" FontSize="Small" Grid.Row="23" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
+
+
+                <Label Text="{Binding [24]}" FontSize="Small" Grid.Row="0" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [25]}" FontSize="Small" Grid.Row="1" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [26]}" FontSize="Small" Grid.Row="2" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [27]}" FontSize="Small" Grid.Row="3" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [28]}" FontSize="Small" Grid.Row="4" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [29]}" FontSize="Small" Grid.Row="5" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [30]}" FontSize="Small" Grid.Row="6" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [31]}" FontSize="Small" Grid.Row="7" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [32]}" FontSize="Small" Grid.Row="8" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [33]}" FontSize="Small" Grid.Row="9" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [34]}" FontSize="Small" Grid.Row="10" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [35]}" FontSize="Small" Grid.Row="11" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [36]}" FontSize="Small" Grid.Row="12" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [37]}" FontSize="Small" Grid.Row="13" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [38]}" FontSize="Small" Grid.Row="14" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [39]}" FontSize="Small" Grid.Row="15" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [40]}" FontSize="Small" Grid.Row="16" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [41]}" FontSize="Small" Grid.Row="17" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [42]}" FontSize="Small" Grid.Row="18" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [43]}" FontSize="Small" Grid.Row="19" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [44]}" FontSize="Small" Grid.Row="20" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [45]}" FontSize="Small" Grid.Row="21" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+                <Label Text="{Binding [46]}" FontSize="Small" Grid.Row="22" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
+
             </Grid>
         </StackLayout>
     </ContentPage.Content>
