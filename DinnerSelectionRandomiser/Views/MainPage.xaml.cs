@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using DinnerSelectionRandomiser.Models;
+using Newtonsoft.Json;
 using Xamarin.Forms;
 
 namespace DinnerSelectionRandomiser.Views
@@ -20,6 +22,7 @@ namespace DinnerSelectionRandomiser.Views
         public MainPage()
         {
             InitializeComponent();
+            PopulateDatabase();
             SetSeason();
 
             // Read the file.
@@ -32,8 +35,8 @@ namespace DinnerSelectionRandomiser.Views
 
         protected override void OnAppearing()
         {
-            SetBinding();
             PopulateDatabase();
+            SetBinding();           
         }
 
         async protected void PopulateDatabase()
@@ -42,7 +45,7 @@ namespace DinnerSelectionRandomiser.Views
         }
 
         void SetBinding()
-        {
+        {            
             BindingContext = null;
             BindingContext = dinnersNames;
         }
@@ -143,6 +146,7 @@ namespace DinnerSelectionRandomiser.Views
         {
             if (dinners.Count == 0) return;
 
+            /*
             //The String of this weeks Dinners to save to file
             string dinnersToSave = "";
 
@@ -154,13 +158,22 @@ namespace DinnerSelectionRandomiser.Views
             }
 
             //Write the Dinners to file
-            File.WriteAllText(thisWeeksDinners, dinnersToSave);
+            //File.WriteAllText(thisWeeksDinners, dinnersToSave);
+            */
+
+            var JsonDinners = JsonConvert.SerializeObject(dinners);
+
+            //Write the Dinners to file
+            File.WriteAllText(thisWeeksDinners, JsonDinners);
+
         }
         #endregion
 
         #region Ingredients
         void OnIngredientsClicked(object sender, EventArgs e)
         {
+            if (dinners.Count == 0) return;
+            
             //Navigate to the Ingredients Page, Passing through the 'shoppingList' List
             Navigation.PushAsync(new IngredientsPage(CreateIngredientsList()));            
         }
@@ -171,16 +184,22 @@ namespace DinnerSelectionRandomiser.Views
 
             foreach (Dinner dinner in dinners)
             {
-                List<string> dinnerIngredients = dinner.Ingredients.Split(',').ToList();
+                List<string> thisDinnersIngredients = dinner.Ingredients.Split(',').ToList();
 
-                foreach (string ingredient in dinnerIngredients)
+                foreach (string ingredient in thisDinnersIngredients)
                 {
-                    shoppingList.Add(ingredient);         
+                    //Remove leading white space from string
+                    StringBuilder sb = new StringBuilder(ingredient);
+                    if (sb[0] == ' ') sb.Remove(0, 1);
+
+                    
+                    shoppingList.Add(sb.ToString());    
                 }
             }
 
-            return shoppingList;
+            return shoppingList.Distinct().ToList();
         }
+
         #endregion
 
         #region Season

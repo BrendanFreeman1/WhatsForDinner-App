@@ -37,7 +37,6 @@
                 <Label Text="{Binding [22]}" FontSize="Small" Grid.Row="22" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
                 <Label Text="{Binding [23]}" FontSize="Small" Grid.Row="23" Grid.Column="1" TextColor="{StaticResource PrimaryColor}"/>
 
-
                 <Label Text="{Binding [24]}" FontSize="Small" Grid.Row="0" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
                 <Label Text="{Binding [25]}" FontSize="Small" Grid.Row="1" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>
                 <Label Text="{Binding [26]}" FontSize="Small" Grid.Row="2" Grid.Column="2" TextColor="{StaticResource PrimaryColor}"/>

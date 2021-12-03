@@ -1,7 +1,6 @@
 ﻿using System.Windows.Input;
 using Xamarin.Essentials;
 using SQLite;
-using System.Collections.Generic;
 
 namespace DinnerSelectionRandomiser.Models
 {

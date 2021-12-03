@@ -8,7 +8,10 @@ namespace DinnerSelectionRandomiser.Views
     {
         public IngredientsPage(List<string> ShoppingList)
         {
+            if (ShoppingList.Count == 0) return;
             InitializeComponent();
+
+            ShoppingList.Sort();
             BindingContext = ShoppingList;
         }
     }
