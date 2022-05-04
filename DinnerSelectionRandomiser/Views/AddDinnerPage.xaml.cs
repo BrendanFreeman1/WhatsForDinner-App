@@ -40,7 +40,7 @@ namespace DinnerSelectionRandomiser.Views
             }
             catch (Exception)
             {
-                Console.WriteLine("Failed to load note.");
+                Console.WriteLine("Failed to load Dinner.");
             }
 
             //If theres no webpage to navigate to, disable the button

@@ -7,33 +7,21 @@
     <ScrollView>
         <StackLayout Margin="{StaticResource PageMargin}">
             <Label Text="Dinner:" TextColor="Gray" FontSize="Small" Padding="0,0,0,0"></Label>
-            <Editor Placeholder="Enter your dinner"
+            <Editor Placeholder="Enter this dinners name"
                     PlaceholderColor="{StaticResource SecondaryColor}"
                     TextColor="{StaticResource PrimaryColor}"
                     Text="{Binding Text}"
                     HeightRequest="50" />
 
-            <Label Text="Dinner Type:" TextColor="Gray" FontSize="Small" Padding="0,20,0,0"></Label>
-            <Picker x:Name="picker"
-                Title="Only one of a type is selected each week"                
-                TitleColor="Gray"
-                TextColor="White"
-                SelectedItem="{Binding Type}">
-                <Picker.Items>
-                    <x:String>Chicken</x:String>
-                    <x:String>Italian</x:String>
-                    <x:String>Asian</x:String>
-                    <x:String>Soup</x:String>
-                    <x:String>Salad</x:String>
-                    <x:String>Roast</x:String>
-                    <x:String>Burger</x:String>
-                    <x:String>Mexican</x:String>
-                    <x:String>Weekend</x:String>
-                </Picker.Items>
-            </Picker>
+            <Label Text="Dinner Type:" TextColor="Gray" FontSize="Small" Padding="0,10,0,0"></Label>
+            <Editor Placeholder="Enter a type for this dinner. Only one dinner of each type is selected each week" FontSize="Medium"
+                        PlaceholderColor="{StaticResource SecondaryColor}"
+                        TextColor="{StaticResource PrimaryColor}"
+                        Text="{Binding Type}"
+                        HeightRequest="90"/>
 
-            <Label Text="Ingredients:" TextColor="Gray" FontSize="Small" Padding="0,20,0,0"></Label>
-            <Editor Placeholder="Enter ingredients. Seperate each by a comma"
+            <Label Text="Ingredients:" TextColor="Gray" FontSize="Small" Padding="0,10,0,0"></Label>
+            <Editor Placeholder="Enter this dinners ingredients. Seperate each by a comma"
                         PlaceholderColor="{StaticResource SecondaryColor}"
                         TextColor="{StaticResource PrimaryColor}"
                         Text="{Binding Ingredients}"
@@ -52,7 +40,7 @@
                         PlaceholderColor="{StaticResource SecondaryColor}"
                         TextColor="{StaticResource PrimaryColor}"
                         Text="{Binding Recipe}"
-                        HeightRequest="75" />
+                        HeightRequest="65" />
 
 
             <Button x:Name="GoToRecipeButton"  Text="Go To Recipe" Command="{Binding OpenWebCommand}" TextColor="White" />

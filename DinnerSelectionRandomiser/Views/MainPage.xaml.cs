@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using DinnerSelectionRandomiser.Models;
-using Newtonsoft.Json;
 using Xamarin.Forms;
 
 namespace DinnerSelectionRandomiser.Views
@@ -14,8 +14,8 @@ namespace DinnerSelectionRandomiser.Views
         readonly string thisWeeksDinners = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ThisWeeksDinners.txt");
 
         List<Dinner> allDinnersList = new List<Dinner>();//Database of all dinners in app
-        readonly List<Dinner> dinners = new List<Dinner>(); //List of Dinners for current week
-        readonly List<string> dinnersNames = new List<string>(); //List of the Names of the Dinners for the current week     
+        List<string> dinnersNames = new List<string>(); //List of the Names of the Dinners for the current week   
+        readonly List<Dinner> dinners = new List<Dinner>(); //List of Dinners for current week          
         readonly Random rnd = new Random();
         string season = "";
 
@@ -23,26 +23,23 @@ namespace DinnerSelectionRandomiser.Views
         {
             InitializeComponent();
             PopulateDatabase();
+            LoadSavedDinners();
             SetSeason();
-
-            // Read the file.
-            if (File.Exists(thisWeeksDinners))
-            {
-                //Parse out each dinner from the ThisWeeksDinners string
-                dinnersNames = File.ReadAllText(thisWeeksDinners).Split(',').ToList();
-            }
         }
 
         protected override void OnAppearing()
         {
-            PopulateDatabase();
-            SetBinding();           
+            PopulateDatabase(); //Reload Database when navigating back to this page
+            SetBinding();
         }
 
-        async protected void PopulateDatabase()
+
+        void PopulateDatabase()
         {
-            allDinnersList = await App.Database.GetDinnerAsync();
+            //Get all Dinners from the database, wait until they're loaded before proceeding
+            allDinnersList = Task.Run(async () => await App.Database.GetDinnerAsync()).Result;
         }
+
 
         void SetBinding()
         {            
@@ -53,7 +50,7 @@ namespace DinnerSelectionRandomiser.Views
         #region Randomise List
         void OnRandomiseClicked(object sender, EventArgs e)
         {
-            PopulateDatabase();            
+            PopulateDatabase(); //Make sure Database is up to date before drawing from it
 
             int dayOfTheWeek = 0;
             Dinner newDinner;
@@ -71,6 +68,7 @@ namespace DinnerSelectionRandomiser.Views
                 //If the current dinner didn't pass the filter, start loop again
                 if(newDinner == null) continue;
 
+                //If the current dinner is suitable
                 dinners.Add(newDinner);
                 dinnersNames.Add(newDinner.Text);
                 allDinnersList.Remove(newDinner);
@@ -129,7 +127,7 @@ namespace DinnerSelectionRandomiser.Views
 
         void RandomiseSingleDinner(int dayOfTheWeek)
         {
-            //If the dinners list isn't fully populated, the database is empty, do nothing
+            //If the dinners list isn't fully populated, do nothing
             if (dinners.Count < 7) return;
 
             int randomIndex = rnd.Next(0, allDinnersList.Count);
@@ -144,9 +142,9 @@ namespace DinnerSelectionRandomiser.Views
         #region Save To File
         void OnSaveClicked(object sender, EventArgs e)
         {
+            //If theres nothing to save, do nothing
             if (dinners.Count == 0) return;
-
-            /*
+            
             //The String of this weeks Dinners to save to file
             string dinnersToSave = "";
 
@@ -158,14 +156,30 @@ namespace DinnerSelectionRandomiser.Views
             }
 
             //Write the Dinners to file
-            //File.WriteAllText(thisWeeksDinners, dinnersToSave);
-            */
+            File.WriteAllText(thisWeeksDinners, dinnersToSave);            
 
-            var JsonDinners = JsonConvert.SerializeObject(dinners);
+        }
 
-            //Write the Dinners to file
-            File.WriteAllText(thisWeeksDinners, JsonDinners);
+        void LoadSavedDinners()
+        {            
+            // Read the file.
+            if (File.Exists(thisWeeksDinners))
+            {
+                //Parse out each dinner from the ThisWeeksDinners string
+                dinnersNames = File.ReadAllText(thisWeeksDinners).Split(',').ToList();
 
+                foreach (string dinnerName in dinnersNames)
+                {
+                    foreach (Dinner dinner in allDinnersList)
+                    {
+                        if (dinner.Text == dinnerName) 
+                        { 
+                            dinners.Add(dinner);
+                            allDinnersList.Remove(dinner);
+                        }
+                    }
+                }          
+            }
         }
         #endregion
 
@@ -191,7 +205,6 @@ namespace DinnerSelectionRandomiser.Views
                     //Remove leading white space from string
                     StringBuilder sb = new StringBuilder(ingredient);
                     if (sb[0] == ' ') sb.Remove(0, 1);
-
                     
                     shoppingList.Add(sb.ToString());    
                 }
@@ -206,7 +219,7 @@ namespace DinnerSelectionRandomiser.Views
         void SetSeason()
         {
             //Set the season
-            if (DateTime.Today.Month <= 2 || DateTime.Today.Month >= 9) //Spring and Summer
+            if (DateTime.Today.Month <= 3 || DateTime.Today.Month >= 9) //Spring and Summer
             {
                 season = "SUMMER";
                 SeasonButton.Text = season;

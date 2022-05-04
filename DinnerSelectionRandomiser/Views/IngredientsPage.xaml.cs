@@ -8,10 +8,11 @@ namespace DinnerSelectionRandomiser.Views
     {
         public IngredientsPage(List<string> ShoppingList)
         {
-            if (ShoppingList.Count == 0) return;
+            if (ShoppingList.Count == 0) return; //If the passed in list is empty, do nothing
+            
             InitializeComponent();
 
-            ShoppingList.Sort();
+            ShoppingList.Sort(); //Arrange the passed in list alphabetically
             BindingContext = ShoppingList;
         }
     }

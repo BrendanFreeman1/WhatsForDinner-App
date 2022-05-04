@@ -49,7 +49,7 @@ namespace DinnerSelectionRandomiser
 
                 //Italian
                 new Dinner { ID = 0, Text = "Bolognese", Type = "Italian", Ingredients = "Mince, Spaghetti, Carrots, Celery, Onion, Garlic, Tin Tomatoes, Tomato Paste, Chicken Stock, Cheese", Recipe = "https://www.sbs.com.au/food/recipes/classic-bolognese" },
-                new Dinner { ID = 0, Text = "Vegetable Lasagne", Type = "Italian", Ingredients = "Pasta Sheets, Pumpkin, Tin Tomatoes, Lentiles, Spinich, Bechamel, Cheese, Butter", Recipe = "https://www.goodfood.com.au/recipes/vegetable-lasagne-20130725-2qlfc" },
+                new Dinner { ID = 0, Text = "Vegetable Lasagne", Type = "Italian", Ingredients = "Pasta Sheets, Pumpkin, Tin Tomatoes, Lentiles, Spinach, Bechamel, Cheese, Butter", Recipe = "https://www.goodfood.com.au/recipes/vegetable-lasagne-20130725-2qlfc" },
                 new Dinner { ID = 0, Text = "Mince Lasagne", Type = "Italian", Ingredients = "Pasta Sheets, Mince, Onion, Garlic, Carrot, Celery, Tin Tomatoes, Tomato Paste, Chicken Stock, Bechamel, Cheese", Recipe = "https://sanremo.com.au/recipes/easy-meat-lasagna/" },
                 new Dinner { ID = 0, Text = "Cabonara", Type = "Italian", Ingredients = "Bacon, Garlic, Fettuccine, Cheese, Cream, Eggs" },
                 new Dinner { ID = 0, Text = "Pesto Pasta", Type = "Italian", Ingredients = "Basil Pesto, Bacon, Garlic, Penne Pasta, Cheese, Cream" },
@@ -82,7 +82,7 @@ namespace DinnerSelectionRandomiser
                 new Dinner { ID = 0, Text = "Grilled Chicken", Type = "Chicken", Ingredients = "Chicken, Garlic, Herbs" },
                 new Dinner { ID = 0, Text = "Chicken Spaghetti", Type = "Chicken", Ingredients = "Chicken, Spaghettim, Onion, Tomato Paste, Garlic, Thyme, Parmesan, Break Crumbs, Lemon", Recipe = "https://www.delicious.com.au/recipes/one-pan-crispy-spaghetti-chicken-recipe/a3k3q2xi" },
                 new Dinner { ID = 0, Text = "Black Basil Chicken", Type = "Chicken", Ingredients = "Chicken, Soy Sauce, Sesame Oil, Cornstarch, Basil leaves, Garlic, Shallots", Recipe = "https://www.goodfood.com.au/recipes/black-basil-chicken-20200518-h1o51l" },
-                new Dinner { ID = 0, Text = "Lemon Chicken and Herbs", Type = "Chicken", Ingredients = "Chicken, Mustard, Lemon Zest + Juice, Dried Oregano, Dried Thyme, Chicken Stock, Garlic, Butter, Flour", Recipe = "https://www.inspiredtaste.net/18649/easy-lemon-chicken-recipe/#itr-recipe-18649" },
+                new Dinner { ID = 0, Text = "Lemon Chicken and Herbs", Type = "Chicken", Ingredients = "Chicken, Mustard, Lemon, Dried Oregano, Dried Thyme, Chicken Stock, Garlic, Butter, Flour", Recipe = "https://www.inspiredtaste.net/18649/easy-lemon-chicken-recipe/#itr-recipe-18649" },
 
                 //Roast
                 new Dinner { ID = 0, Text = "Roast Chicken", Type = "Weekend", Ingredients = "Whole Chicken, Roasting Vegetables" },
@@ -96,7 +96,6 @@ namespace DinnerSelectionRandomiser
                 new Dinner { ID = 0, Text = "Kangaroo Steak", Type = "Redmeat", Ingredients = "Kangaroo Steaks, Potatoes" },
                 new Dinner { ID = 0, Text = "Lamb Schnitzel", Type = "Weekend", Ingredients = "Lamb Cutlets, Flour, Egg, Bread Crumbs", Recipe = "https://www.australianlamb.com.au/recipes/parmesan-lamb-schnitzel/#" },
                 new Dinner { ID = 0, Text = "Fritters", Type = "Weekend", Ingredients = "Bacon, Onions, Garlic, Zucchini, Sweet Potato, Cheese, Self Raising Flour, Milk, Eggs", Recipe = "https://www.taste.com.au/recipes/cheesy-bacon-zucchini-fritters/rzsovbc0?fbclid=IwAR3m_2PwpcAonijBIYj4sYakiWn7BOqbpJBx5QEtrDDd5i6jUxjs02sCemk" },
-                new Dinner { ID = 0, Text = "Calamari and Chips", Type = "Other", Ingredients = "Frozen Calamari, Frozen Chips" },
                 new Dinner { ID = 0, Text = "Vietnamese Pancakes", Type = "Other", Ingredients = "Rice Flour, Flour, Coconut Cream, Shallots, Pork, Bean Sprouts, Mung Beans, Spinach", Recipe = "https://www.hungryhuy.com/banh-xeo-savory-vietnamese-crepes/" },
                 new Dinner { ID = 0, Text = "Greek Tray Bake", Type = "Other", Ingredients = "Lamb Mince, Bread Crumbs, Feta, Potatoes, Zucchini, Cherry Tomatoes, Eggs, Onion", Recipe = "https://www.bbcgoodfood.com/recipes/greek-lamb-tray-bake" },     
 
