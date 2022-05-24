@@ -37,73 +37,72 @@ namespace DinnerSelectionRandomiser
             List<Dinner> AllDinnersList = new List<Dinner>
             {
                 //Soup
-                new Dinner (0, "Pumpkin Soup", "Soup", "Pumpkin, Garlic, Onion, Cream, Vegetable Stock", "https://www.sbs.com.au/food/recipes/pumpkin-soup"),                
-                new Dinner (0, "Tomato Soup",  "Soup", "Tin Tomatoes, Tomato Paste, Garlic, Onion, Potato, Vegetable Stock", "https://www.bbcgoodfood.com/recipes/tomato-soup" ),
-
-                new Dinner (0, "Chicken Soup", "Soup", "Whole Chicken, Carrots, Celery, Onion, Garlic, Chicken Stock", "https://www.marthastewart.com/336138/basic-chicken-soup" ),
-                new Dinner (0, "Leek and Potato Soup", "Soup", "Leek, Potato, Garlic, Butter, Vegetable Stock, Cream", "https://www.recipetineats.com/leek-and-potato-soup/" ),
+                new Dinner {ID = 0, Text = "Pumpkin Soup", Type = "Soup", Ingredients = "Pumpkin, Garlic, Onion, Cream, Vegetable Stock", Recipe = "https://www.sbs.com.au/food/recipes/pumpkin-soup" },                
+                new Dinner {ID = 0, Text = "Tomato Soup",  Type = "Soup", Ingredients = "Tin Tomatoes, Tomato Paste, Garlic, Onion, Potato, Vegetable Stock", Recipe = "https://www.bbcgoodfood.com/recipes/tomato-soup" },                
+                new Dinner {ID = 0, Text = "Chicken Soup", Type = "Soup", Ingredients = "Whole Chicken, Carrots, Celery, Onion, Garlic, Chicken Stock", Recipe = "https://www.marthastewart.com/336138/basic-chicken-soup" },
+                new Dinner {ID = 0, Text = "Leek and Potato Soup", Type = "Soup", Ingredients = "Leek, Potato, Garlic, Butter, Vegetable Stock, Cream", Recipe = "https://www.recipetineats.com/leek-and-potato-soup/" },
 
                 //Salad
-                new Dinner (0, "Caesar Salad", "Salad", "Cos Lettuce, Chicken or Bacon, Croutons, Eggs, Cheese, Aioli", ""),
-                new Dinner (0, "Halloumi Salad", "Salad", "Spinich, Halloumi, Capsicum, Cucumber", "" ),
-                new Dinner (0, "Herbed Potato Salad", "Salad", "Potato, Shallots, Lemon Juice, Dijon Mustard, Celery, Parsley", "" ),
+                new Dinner {ID = 0, Text = "Caesar Salad", Type = "Salad", Ingredients = "Cos Lettuce, Chicken or Bacon, Croutons, Eggs, Cheese, Aioli", Recipe = ""},
+                new Dinner {ID = 0, Text = "Halloumi Salad", Type = "Salad", Ingredients = "Spinich, Halloumi, Capsicum, Cucumber", Recipe = "" },
+                new Dinner {ID = 0, Text = "Herbed Potato Salad", Type = "Salad", Ingredients = "Potato, Shallots, Lemon Juice, Dijon Mustard, Celery, Parsley", Recipe =  "" },
 
                 //Italian
-                new Dinner (0, "Bolognese", "Italian", "Mince, Spaghetti, Carrots, Celery, Onion, Garlic, Tin Tomatoes, Tomato Paste, Chicken Stock, Cheese", "https://www.sbs.com.au/food/recipes/classic-bolognese" ),
-                new Dinner (0, "Vegetable Lasagne", "Italian", "Pasta Sheets, Pumpkin, Tin Tomatoes, Lentiles, Spinach, Bechamel, Cheese, Butter", "https://www.goodfood.com.au/recipes/vegetable-lasagne-20130725-2qlfc" ),
-                new Dinner (0, "Mince Lasagne", "Italian", "Pasta Sheets, Mince, Onion, Garlic, Carrot, Celery, Tin Tomatoes, Tomato Paste, Chicken Stock, Bechamel, Cheese", "https://sanremo.com.au/recipes/easy-meat-lasagna/" ),
-                new Dinner (0, "Cabonara", "Italian", "Bacon, Garlic, Fettuccine, Cheese, Cream, Eggs", "" ),
-                new Dinner (0, "Pesto Pasta", "Italian", "Basil Pesto, Bacon, Garlic, Penne Pasta, Cheese, Cream", "" ),
-                new Dinner (0, "Pasta Bake", "Italian", "Macaroni Pasta, Pasta Bake Sauce, Cheese, Pasta Bake", "" ),
-                new Dinner (0, "Browned Butter Gnocchi", "Italian", "Gnocchi, Butter, Garlic", "" ),
-                new Dinner (0, "Tomato Gnocchi", "Italian", "Gnocchi, Onion, Garlic, Tin Tomatoes, Italian Herbs", "" ),
-                new Dinner (0, "Pesto Gnocchi", "Italian", "Gnocchi, Garlic, Basil Pesto, Cream", "" ),
-                new Dinner (0, "Cream Gnocchi", "Italian", "Gnocchi, Bacon, Cream, Cheese", "" ),
-                new Dinner (0, "Sweet Potato Gnocchi", "Italian", "Gnocchi, Parmesan, Milk, Sweet Potato, Spinach, Cinnamon, Chickpeas, Ricotta, Sage, Garlic", "https://www.woolworths.com.au/shop/recipes/gnocchi-with-sweet-potato-sauce" ),
+                new Dinner {ID = 0, Text = "Bolognese", Type = "Italian", Ingredients = "Mince, Spaghetti, Carrots, Celery, Onion, Garlic, Tin Tomatoes, Tomato Paste, Chicken Stock, Cheese", Recipe = "https://www.sbs.com.au/food/recipes/classic-bolognese" },
+                new Dinner {ID = 0, Text = "Vegetable Lasagne", Type = "Italian", Ingredients = "Pasta Sheets, Pumpkin, Tin Tomatoes, Lentiles, Spinach, Bechamel, Cheese, Butter", Recipe = "https://www.goodfood.com.au/recipes/vegetable-lasagne-20130725-2qlfc" },
+                new Dinner {ID = 0, Text = "Mince Lasagne", Type = "Italian", Ingredients = "Pasta Sheets, Mince, Onion, Garlic, Carrot, Celery, Tin Tomatoes, Tomato Paste, Chicken Stock, Bechamel, Cheese", Recipe = "https://sanremo.com.au/recipes/easy-meat-lasagna/" },
+                new Dinner {ID = 0, Text = "Cabonara", Type = "Italian", Ingredients = "Bacon, Garlic, Fettuccine, Cheese, Cream, Eggs", Recipe = "" },
+                new Dinner {ID = 0, Text = "Pesto Pasta", Type = "Italian", Ingredients = "Basil Pesto, Bacon, Garlic, Penne Pasta, Cheese, Cream", Recipe = "" },
+                new Dinner {ID = 0, Text = "Pasta Bake", Type = "Italian", Ingredients = "Macaroni Pasta, Pasta Bake Sauce, Cheese, Pasta Bake", Recipe = "" },
+                new Dinner {ID = 0, Text = "Browned Butter Gnocchi", Type = "Italian", Ingredients = "Gnocchi, Butter, Garlic", Recipe = "" },
+                new Dinner {ID = 0, Text = "Tomato Gnocchi", Type = "Italian", Ingredients = "Gnocchi, Onion, Garlic, Tin Tomatoes, Italian Herbs", Recipe = "" },
+                new Dinner {ID = 0, Text = "Pesto Gnocchi", Type = "Italian", Ingredients = "Gnocchi, Garlic, Basil Pesto, Cream", Recipe = "" },
+                new Dinner {ID = 0, Text = "Cream Gnocchi", Type = "Italian", Ingredients = "Gnocchi, Bacon, Cream, Cheese", Recipe = "" },
+                new Dinner {ID = 0, Text = "Sweet Potato Gnocchi", Type = "Italian", Ingredients = "Gnocchi, Parmesan, Milk, Sweet Potato, Spinach, Cinnamon, Chickpeas, Ricotta, Sage, Garlic", Recipe = "https://www.woolworths.com.au/shop/recipes/gnocchi-with-sweet-potato-sauce" },
 
-                new Dinner (0, "Chicken Risotto", "Italian", "Chicken, Chicken Stock, Butter, Onion, Garlic, Arborio Rice", ""),
-                new Dinner (0, "Tomato Risotto", "Italian", "Tin Tomatoes, Vegatable Stock, Butter, Onion, Garlic, Rosemary, Arborio Rice, Cherry Tomatoes, Basil, Parmesan", "https://www.bbcgoodfood.com/recipes/creamy-tomato-risotto" ),
-                new Dinner (0, "Bacon Thyme Risotto", "Italian", "Bacon, Chicken Stock, Butter, Onion, Garlic, Thyme, Arborio Rice", "https://www.delish.com/cooking/recipe-ideas/a24280714/instant-pot-risotto/" ),
+                new Dinner {ID = 0, Text = "Chicken Risotto", Type = "Italian", Ingredients = "Chicken, Chicken Stock, Butter, Onion, Garlic, Arborio Rice", Recipe = ""},
+                new Dinner {ID = 0, Text = "Tomato Risotto", Type = "Italian", Ingredients = "Tin Tomatoes, Vegatable Stock, Butter, Onion, Garlic, Rosemary, Arborio Rice, Cherry Tomatoes, Basil, Parmesan", Recipe = "https://www.bbcgoodfood.com/recipes/creamy-tomato-risotto" },
+                new Dinner {ID = 0, Text = "Bacon Thyme Risotto", Type = "Italian", Ingredients = "Bacon, Chicken Stock, Butter, Onion, Garlic, Thyme, Arborio Rice", Recipe = "https://www.delish.com/cooking/recipe-ideas/a24280714/instant-pot-risotto/" },
 
                 //Asian
-                new Dinner (0, "Honey Chicken", "Asian", "Chicken, Honey, Rice, Soy Sauce, Eggs, Lemon, Sesame Oil", "https://www.youtube.com/watch?vNqwW4BiLoBw" ),
-                new Dinner (0, "Satay Chicken", "Asian", "Chicken, Peanut Butter, Rice, Onion, Garlic, Soy Sauce, Coconut Milk", "" ),
-                new Dinner (0, "Chicken Stirfry", "Asian", "Chicken, Noodles, Onion, Beans, Capsicum, Soy Sauce, Sesame Oil, Shallots", "" ),
+                new Dinner {ID = 0, Text = "Honey Chicken", Type = "Asian", Ingredients = "Chicken, Honey, Rice, Soy Sauce, Eggs, Lemon, Sesame Oil", Recipe = "https://www.youtube.com/watch?vNqwW4BiLoBw" },
+                new Dinner {ID = 0, Text = "Satay Chicken", Type = "Asian", Ingredients = "Chicken, Peanut Butter, Rice, Onion, Garlic, Soy Sauce, Coconut Milk", Recipe = "" },
+                new Dinner {ID = 0, Text = "Chicken Stirfry", Type = "Asian", Ingredients = "Chicken, Noodles, Onion, Beans, Capsicum, Soy Sauce, Sesame Oil, Shallots", Recipe = "" },
 
                 //Burger
-                new Dinner (0, "Beef Burger", "Burger", "Mince Meat, Burger Buns, Lettuce, Tomato, Red Onion, Cheese", "" ),
-                new Dinner (0, "Chicken Burger", "Burger", "Chicken, Burger Buns, Lettuce, Tomato, Avocado, Red Onion, Cheese", "" ),
-                new Dinner (0, "Turkey Burger", "Burger", "Turkey Mince, Pita Bread, Lemon, Dried Thyme, Beetroot, Red Onion, Mustard", "https://www.bbcgoodfood.com/recipes/turkey-burgers-beetroot-relish" ),
+                new Dinner {ID = 0, Text = "Beef Burger", Type = "Burger", Ingredients = "Mince Meat, Burger Buns, Lettuce, Tomato, Red Onion, Cheese", Recipe = "" },
+                new Dinner {ID = 0, Text = "Chicken Burger", Type = "Burger", Ingredients = "Chicken, Burger Buns, Lettuce, Tomato, Avocado, Red Onion, Cheese", Recipe = "" },
+                new Dinner {ID = 0, Text = "Turkey Burger", Type = "Burger", Ingredients = "Turkey Mince, Pita Bread, Lemon, Dried Thyme, Beetroot, Red Onion, Mustard", Recipe = "https://www.bbcgoodfood.com/recipes/turkey-burgers-beetroot-relish" },
 
                 //Chicken
-                new Dinner (0, "Chicken Schnitzel", "Chicken", "Chicken, Bread Crumbs, Flour, Egg", "" ),
-                new Dinner (0, "Chicken Parmigiana", "Chicken", "Chicken, Bread Crumbs, Flour, Egg, Tomato Pase, Cheese", "" ),
-                new Dinner (0, "Chicken Nuggets", "Chicken", "Chicken, Bread Crumbs, Flour, Egg", "" ),
-                new Dinner (0, "Chicken Wings", "Chicken", "Chicken Wings, Flour, Baking Soda, Herbs", "" ),
-                new Dinner (0, "Grilled Chicken", "Chicken", "Chicken, Garlic, Herbs", "" ),
-                new Dinner (0, "Chicken Spaghetti", "Chicken", "Chicken, Spaghettim, Onion, Tomato Paste, Garlic, Thyme, Parmesan, Break Crumbs, Lemon", "https://www.delicious.com.au/recipes/one-pan-crispy-spaghetti-chicken-recipe/a3k3q2xi" ),
-                new Dinner (0, "Black Basil Chicken", "Chicken", "Chicken, Soy Sauce, Sesame Oil, Cornstarch, Basil leaves, Garlic, Shallots", "https://www.goodfood.com.au/recipes/black-basil-chicken-20200518-h1o51l" ),
-                new Dinner (0, "Lemon Chicken and Herbs", "Chicken", "Chicken, Mustard, Lemon, Dried Oregano, Dried Thyme, Chicken Stock, Garlic, Butter, Flour", "https://www.inspiredtaste.net/18649/easy-lemon-chicken-recipe/#itr-recipe-18649" ),
+                new Dinner {ID = 0, Text = "Chicken Schnitzel", Type = "Chicken", Ingredients = "Chicken, Bread Crumbs, Flour, Egg", Recipe = "" },
+                new Dinner {ID = 0, Text = "Chicken Parmigiana", Type = "Chicken", Ingredients = "Chicken, Bread Crumbs, Flour, Egg, Tomato Pase, Cheese", Recipe = "" },
+                new Dinner {ID = 0, Text = "Chicken Nuggets", Type = "Chicken", Ingredients = "Chicken, Bread Crumbs, Flour, Egg", Recipe = "" },
+                new Dinner {ID = 0, Text = "Chicken Wings", Type = "Chicken", Ingredients = "Chicken Wings, Flour, Baking Soda, Herbs", Recipe = "" },
+                new Dinner {ID = 0, Text = "Grilled Chicken", Type = "Chicken", Ingredients = "Chicken, Garlic, Herbs", Recipe = "" },
+                new Dinner {ID = 0, Text = "Chicken Spaghetti", Type = "Chicken", Ingredients = "Chicken, Spaghettim, Onion, Tomato Paste, Garlic, Thyme, Parmesan, Break Crumbs, Lemon", Recipe = "https://www.delicious.com.au/recipes/one-pan-crispy-spaghetti-chicken-recipe/a3k3q2xi" },
+                new Dinner {ID = 0, Text = "Black Basil Chicken", Type = "Chicken", Ingredients = "Chicken, Soy Sauce, Sesame Oil, Cornstarch, Basil leaves, Garlic, Shallots", Recipe = "https://www.goodfood.com.au/recipes/black-basil-chicken-20200518-h1o51l" },
+                new Dinner {ID = 0, Text = "Lemon Chicken and Herbs", Type = "Chicken", Ingredients = "Chicken, Mustard, Lemon, Dried Oregano, Dried Thyme, Chicken Stock, Garlic, Butter, Flour", Recipe = "https://www.inspiredtaste.net/18649/easy-lemon-chicken-recipe/#itr-recipe-18649" },
 
                 //Roast
-                new Dinner (0, "Roast Chicken", "Weekend", "Whole Chicken, Roasting Vegetables", "" ),
-                new Dinner (0, "Pulled Pork", "Weekend", "Pork Shoulder, Apple Sauce", "https://www.bodyweightwarrior.co.uk/blog/simple-pulled-pork" ),
-                new Dinner (0, "Roast Lamb", "Weekend", "Lamb, Garlic, Rosemary, Roasting Vegetables", "" ),
+                new Dinner {ID = 0, Text = "Roast Chicken", Type = "Weekend", Ingredients = "Whole Chicken, Roasting Vegetables", Recipe = "" },
+                new Dinner {ID = 0, Text = "Pulled Pork", Type = "Weekend", Ingredients = "Pork Shoulder, Apple Sauce", Recipe = "https://www.bodyweightwarrior.co.uk/blog/simple-pulled-pork" },
+                new Dinner {ID = 0, Text = "Roast Lamb", Type = "Weekend", Ingredients = "Lamb, Garlic, Rosemary, Roasting Vegetables", Recipe = "" },
 
                 //Other
-                new Dinner (0, "Pizza", "Weekend", "Flour, Yeast, Tomato Paste, Cheese, Feta, Deli Meat, Capsicum, Red Onion", "" ),
-                new Dinner (0, "Gozleme", "Other", "Flour, Feta, Spinich, Garlic, Eggs, Cheese", "https://www.recipetineats.com/gozleme/" ),
-                new Dinner (0, "Quiche", "Other", "Eggs, Bacon, Oats, Self Raising Flour, Butter, Cheese", "https://www.bestrecipes.com.au/recipes/easy-quiche-recipe/bym5vl9w" ),
-                new Dinner (0, "Kangaroo Steak", "Redmeat", "Kangaroo Steaks, Potatoes", "" ),
-                new Dinner (0, "Lamb Schnitzel", "Weekend", "Lamb Cutlets, Flour, Egg, Bread Crumbs", "https://www.australianlamb.com.au/recipes/parmesan-lamb-schnitzel/#" ),
-                new Dinner (0, "Fritters", "Weekend", "Bacon, Onions, Garlic, Zucchini, Sweet Potato, Cheese, Self Raising Flour, Milk, Eggs", "https://www.taste.com.au/recipes/cheesy-bacon-zucchini-fritters/rzsovbc0?fbclidIwAR3m_2PwpcAonijBIYj4sYakiWn7BOqbpJBx5QEtrDDd5i6jUxjs02sCemk" ),
-                new Dinner (0, "Vietnamese Pancakes", "Other", "Rice Flour, Flour, Coconut Cream, Shallots, Pork, Bean Sprouts, Mung Beans, Spinach", "https://www.hungryhuy.com/banh-xeo-savory-vietnamese-crepes/" ),
-                new Dinner (0, "Greek Tray Bake", "Other", "Lamb Mince, Bread Crumbs, Feta, Potatoes, Zucchini, Cherry Tomatoes, Eggs, Onion", "https://www.bbcgoodfood.com/recipes/greek-lamb-tray-bake" ), 
+                new Dinner {ID = 0, Text = "Pizza", Type = "Weekend", Ingredients = "Flour, Yeast, Tomato Paste, Cheese, Feta, Deli Meat, Capsicum, Red Onion", Recipe = "" },
+                new Dinner {ID = 0, Text = "Gozleme", Type = "Other", Ingredients = "Flour, Feta, Spinich, Garlic, Eggs, Cheese", Recipe = "https://www.recipetineats.com/gozleme/" },
+                new Dinner {ID = 0, Text = "Quiche", Type = "Other", Ingredients = "Eggs, Bacon, Oats, Self Raising Flour, Butter, Cheese", Recipe = "https://www.bestrecipes.com.au/recipes/easy-quiche-recipe/bym5vl9w" },
+                new Dinner {ID = 0, Text = "Kangaroo Steak", Type = "Redmeat", Ingredients = "Kangaroo Steaks, Potatoes", Recipe = "" },
+                new Dinner {ID = 0, Text = "Lamb Schnitzel", Type = "Weekend", Ingredients = "Lamb Cutlets, Flour, Egg, Bread Crumbs", Recipe = "https://www.australianlamb.com.au/recipes/parmesan-lamb-schnitzel/#" },
+                new Dinner {ID = 0, Text = "Fritters", Type = "Weekend", Ingredients = "Bacon, Onions, Garlic, Zucchini, Sweet Potato, Cheese, Self Raising Flour, Milk, Eggs", Recipe = "https://www.taste.com.au/recipes/cheesy-bacon-zucchini-fritters/rzsovbc0?fbclidIwAR3m_2PwpcAonijBIYj4sYakiWn7BOqbpJBx5QEtrDDd5i6jUxjs02sCemk" },
+                new Dinner {ID = 0, Text = "Vietnamese Pancakes", Type = "Other", Ingredients = "Rice Flour, Flour, Coconut Cream, Shallots, Pork, Bean Sprouts, Mung Beans, Spinach", Recipe = "https://www.hungryhuy.com/banh-xeo-savory-vietnamese-crepes/" },
+                new Dinner {ID = 0, Text = "Greek Tray Bake", Type = "Other", Ingredients = "Lamb Mince, Bread Crumbs, Feta, Potatoes, Zucchini, Cherry Tomatoes, Eggs, Onion", Recipe = "https://www.bbcgoodfood.com/recipes/greek-lamb-tray-bake" }, 
 
                 //Mexican
-                new Dinner (0, "Tacos", "Mexican", "Mince, Taco Shells, Tin Tomatoes, Tomato Paste, Onion, Garlic, Carrot, Cheese", "" ),
-                new Dinner (0, "Fajitas", "Mexican", "Chicken, Wraps, Capsicum, Onion, Garlic, Cheese", "" ),
-                new Dinner (0, "Enchiladas", "Mexican", "Mince, Wraps, Tin Tomatoes, Tomato Paste, Capsicum, Onion, Garlic, Cheese", "" )
+                new Dinner {ID = 0, Text = "Tacos", Type = "Mexican", Ingredients = "Mince, Taco Shells, Tin Tomatoes, Tomato Paste, Onion, Garlic, Carrot, Cheese", Recipe = "" },
+                new Dinner {ID = 0, Text = "Fajitas", Type = "Mexican", Ingredients = "Chicken, Wraps, Capsicum, Onion, Garlic, Cheese", Recipe = "" },
+                new Dinner {ID = 0, Text = "Enchiladas", Type = "Mexican", Ingredients = "Mince, Wraps, Tin Tomatoes, Tomato Paste, Capsicum, Onion, Garlic, Cheese", Recipe = "" }
         };
 
             

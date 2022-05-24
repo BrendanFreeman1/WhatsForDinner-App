@@ -12,10 +12,9 @@ namespace DinnerSelectionRandomiser.Models
         public string Type{ get; set; }
         public string Ingredients { get; set; }
         public string Recipe { get; set; }
-        
-        public Dinner(int id, string text, string type, string ingredients, string recipe)
+
+        public Dinner(string text, string type, string ingredients, string recipe)
         {
-            ID = id;
             Text = text;
             Type = type;
             Ingredients = ingredients;
@@ -26,8 +25,6 @@ namespace DinnerSelectionRandomiser.Models
         {
             OpenWebCommand = new Xamarin.Forms.Command(async () => await Browser.OpenAsync(Recipe));
         }
-
-        //Create constructor
 
         public ICommand OpenWebCommand { get; }
     }
