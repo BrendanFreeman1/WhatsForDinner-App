@@ -13,7 +13,7 @@ namespace DinnerSelectionRandomiser.Views
     {
         readonly string thisWeeksDinners = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ThisWeeksDinners.txt");
 
-        List<Dinner> allDinnersList = new List<Dinner>();//Database of all dinners in app
+        List<Dinner> allDinnersList = new List<Dinner>();//List of all dinners taken from the apps database
         List<string> dinnersNames = new List<string>(); //List of the Names of the Dinners for the current week   
         readonly List<Dinner> dinners = new List<Dinner>(); //List of Dinners for current week          
         readonly Random rnd = new Random();
@@ -40,7 +40,6 @@ namespace DinnerSelectionRandomiser.Views
             allDinnersList = Task.Run(async () => await App.Database.GetDinnerAsync()).Result;
         }
 
-
         void SetBinding()
         {            
             BindingContext = null;
@@ -59,7 +58,7 @@ namespace DinnerSelectionRandomiser.Views
 
             while (dayOfTheWeek < 7)
             {
-                //Will break out of loop when dinners run out
+                //As dinners are removed from the allDinnersList this will break out of loop when the list is empty
                 if (allDinnersList.Count == 0) break; 
 
                 //Get Random Dinner
@@ -68,7 +67,7 @@ namespace DinnerSelectionRandomiser.Views
                 //If the current dinner didn't pass the filter, start loop again
                 if(newDinner == null) continue;
 
-                //If the current dinner is suitable
+                //If the current dinner did pass the filter
                 dinners.Add(newDinner);
                 dinnersNames.Add(newDinner.Text);
                 allDinnersList.Remove(newDinner);
@@ -85,12 +84,16 @@ namespace DinnerSelectionRandomiser.Views
 
             while (newDinner == null)
             {
-                //Will break out of loop when dinners run out
+                //As dinners are removed from the allDinnersList this will break out of loop when the list is empty
+                //CHECK IF LOGIC CAN BE REWORKED TO REMOVE CHECKS AT EACH STAGE OF FINDING DINNERS FOR THE WEEK!!?!
                 if (allDinnersList.Count == 0) break;
 
+                //Get a random number between 0 and the lenth of the allDinnersList
                 randomIndex = rnd.Next(0, allDinnersList.Count);
+                //Grab the dinner at the index of that random number
                 newDinner = allDinnersList[randomIndex];
 
+                //Pass this dinner through the filters to see if its suitable with the dinners we already have
                 if (Filter(newDinner, dayOfTheWeek)) newDinner = null;
             }
 
@@ -148,7 +151,8 @@ namespace DinnerSelectionRandomiser.Views
             //The String of this weeks Dinners to save to file
             string dinnersToSave = "";
 
-            //Construct the string
+            //Construct the string but adding the name of each dinner plus a comma.
+            //Dont add a comma on the last entry
             for (int i = 0; i < dinners.Count; i++)
             {
                 if (i < dinners.Count - 1) { dinnersToSave += dinners[i].Text + ","; }
@@ -162,18 +166,18 @@ namespace DinnerSelectionRandomiser.Views
 
         void LoadSavedDinners()
         {            
-            // Read the file.
+            //Check if the file exists
             if (File.Exists(thisWeeksDinners))
             {
-                //Parse out each dinner from the ThisWeeksDinners string
+                //Parse out each dinners name from the thisWeeksDinners string
                 dinnersNames = File.ReadAllText(thisWeeksDinners).Split(',').ToList();
 
                 foreach (string dinnerName in dinnersNames)
                 {
                     foreach (Dinner dinner in allDinnersList)
                     {
-                        if (dinner.Text == dinnerName) 
-                        { 
+                        if (dinner.Text == dinnerName)
+                        {
                             dinners.Add(dinner);
                             allDinnersList.Remove(dinner);
                         }
