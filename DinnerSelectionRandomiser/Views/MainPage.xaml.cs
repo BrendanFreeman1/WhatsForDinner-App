@@ -37,7 +37,7 @@ namespace DinnerSelectionRandomiser.Views
         void PopulateDatabase()
         {
             //Get all Dinners from the database, wait until they're loaded before proceeding
-            allDinnersList = Task.Run(async () => await App.Database.GetDinnerAsync()).Result;
+            allDinnersList = Task.Run(async () => await App.Database.GetDinnersAsync()).Result;
         }
 
         void SetBinding()

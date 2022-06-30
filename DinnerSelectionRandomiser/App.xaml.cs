@@ -26,14 +26,13 @@ namespace DinnerSelectionRandomiser
 
         public App()
         {
-            InitializeComponent();          
-
+            InitializeComponent();
             MainPage = new AppShell();
         }
 
         async protected override void OnStart()
         {
-            List<Dinner> DatabaseList = await Database.GetDinnerAsync();
+            List<Dinner> DatabaseList = await Database.GetDinnersAsync();
             List<Dinner> AllDinnersList = new List<Dinner>
             {
                 //Soup
@@ -108,7 +107,6 @@ namespace DinnerSelectionRandomiser
             
             foreach (Dinner dinner in AllDinnersList)
             {
-
                 if (!DatabaseList.Contains(dinner))
                 {
                     await database.SaveDinnerAsync(dinner);

@@ -15,7 +15,7 @@ namespace DinnerSelectionRandomiser.Data
             database.CreateTableAsync<Dinner>().Wait();
         }
 
-        public Task<List<Dinner>> GetDinnerAsync()
+        public Task<List<Dinner>> GetDinnersAsync()
         {
             //Get all Dinners.
             return database.Table<Dinner>().ToListAsync();
@@ -24,9 +24,7 @@ namespace DinnerSelectionRandomiser.Data
         public Task<Dinner> GetDinnerAsync(int id)
         {
             // Get a specific Dinner.
-            return database.Table<Dinner>()
-                            .Where(i => i.ID == id)
-                            .FirstOrDefaultAsync();
+            return database.Table<Dinner>().Where(i => i.ID == id).FirstOrDefaultAsync();
         }
 
         public Task<int> SaveDinnerAsync(Dinner dinner)

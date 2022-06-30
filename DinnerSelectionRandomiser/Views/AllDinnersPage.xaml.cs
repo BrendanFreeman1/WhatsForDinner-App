@@ -19,7 +19,7 @@ namespace DinnerSelectionRandomiser.Views
 
             // Retrieve all the notes from the database, and set them as the
             // data source for the CollectionView.
-            collectionView.ItemsSource = await App.Database.GetDinnerAsync();
+            collectionView.ItemsSource = await App.Database.GetDinnersAsync();
         }
 
         async void OnAddClicked(object sender, EventArgs e)

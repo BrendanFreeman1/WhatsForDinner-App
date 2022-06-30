@@ -6,8 +6,7 @@ namespace DinnerSelectionRandomiser.Models
 {
     public class Dinner
     {
-        [PrimaryKey, AutoIncrement]
-        public int ID { get; set; } //PrimaryKey which auto increments as each entry is added to the database
+        [PrimaryKey, AutoIncrement] public int ID { get; set; } //PrimaryKey which auto increments as each entry is added to the database
         public string Text { get; set; }
         public string Type{ get; set; }
         public string Ingredients { get; set; }
