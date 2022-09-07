@@ -16,9 +16,10 @@
 
 <div align="left">
   <h3> Technologies </h3>
-    <p>
-    'Whats for Dinner?' was built in the .NET Framework using Visual Studio. I used Xamarin for the frontend, C# for the backend and SQLite for        the database.
-    </p>
+  <P>'Whats for Dinner?' was built in the .NET Framework using Visual Studio.</p>
+  <P> * Frontend: Xamarin</p>
+  <P> * Backend: C#</p>
+  <P> * Database: SQLite</p>
 </div>
 
 <div>
