@@ -56,6 +56,7 @@
       <p> * Searching and Sorting 'Dinner' objects on All Dinners Page.</p>            
       <p> * Add controls to allow users to specify how they want the dinners filtered when randomising.</p>
       <p> * Add more to the preloaded dinners.</p>
+      <p> * Ability to create custome meal plan that is longer or shorter than a week. User can add as many days as they want and have dinners selected for               each day</p>
     </p>
   </div>
 
