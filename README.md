@@ -59,13 +59,13 @@
     <li> Ingredients page to display an aggregated list of all the ingredients for the dinners in the current list. 
           List is sorted alphabetically and removes duplicates.</li>
   </ul>
+  <h3> Future Features </h3>
   <ul>
-    <h4> Future Features </h4>
-    <li> * Individually selecting specific dinners instead of randomising them to build out the weekly dinner plan</li>
-    <li> * Searching and Sorting 'Dinner' objects on All Dinners Page.</li>            
-    <li> * Add controls to allow users to specify how they want the dinners filtered when randomising.</li>
-    <li> * Add more to the preloaded dinners.</li>
-    <li> * Ability to create custome meal plan that is longer or shorter than a week. User can add as many days as they want and have dinners selected for              each day</li>
+    <li> Individually selecting specific dinners instead of randomising them to build out the weekly dinner plan</li>
+    <li> Searching and Sorting 'Dinner' objects on All Dinners Page.</li>            
+    <li> Add controls to allow users to specify how they want the dinners filtered when randomising.</li>
+    <li> Add more to the preloaded dinners.</li>
+    <li> Ability to create custome meal plan that is longer or shorter than a week. User can add as many days as they want and have dinners selected for              each day</li>
   <ul>
 </div>
 
