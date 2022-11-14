@@ -18,7 +18,7 @@
   <h2>Built With</h2>
   <h3>Languages</h3>
   <ul>
-   <li>c#</li>
+   <li>C#</li>
    <li>Xamarin</li>
    <li>SQLite</li>
   </ul>
