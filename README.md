@@ -49,24 +49,24 @@
   
 <div>
   <h3> Features </h3>
-  <p>
-    <p> * Add 'Dinner' objects and save them to the local database. Includes saving a link to a website for the recipe and navigating to it in app.</p>
-    <p> * Delete 'Dinner' objects from the local database.</p>            
-    <p> * 'Dinner' objects preloaded in the app so its ready to use stright away.</p>
-    <p> * Generate a randomised dinner plan, only one dinner of a type will be selected each time the list is randomised.</p>
-    <p> * If you only want to change one or two dinners in your randomised list, tap the specific dinner to randomise it to a different one.</p>
-    <p> * Swap between Summer and Winter to have salads or soups (respectively) included in the randomised list.</p>
-    <p> * Ingredients page to display an aggregated list of all the ingredients for the dinners in the current list. 
-          List is sorted alphabetically and removes duplicates.</p>
-  </p>
-  <p>
+  <ul>
+    <li> Add 'Dinner' objects and save them to the local database. Includes saving a link to a website for the recipe and navigating to it in app.</li>
+    <li> Delete 'Dinner' objects from the local database.</li>            
+    <li> 'Dinner' objects preloaded in the app so its ready to use stright away.</li>
+    <li> Generate a randomised dinner plan, only one dinner of a type will be selected each time the list is randomised.</li>
+    <li> If you only want to change one or two dinners in your randomised list, tap the specific dinner to randomise it to a different one.</li>
+    <li> Swap between Summer and Winter to have salads or soups (respectively) included in the randomised list.</li>
+    <li> Ingredients page to display an aggregated list of all the ingredients for the dinners in the current list. 
+          List is sorted alphabetically and removes duplicates.</li>
+  </ul>
+  <ul>
     <h4> Future Features </h4>
-    <p> * Individually selecting specific dinners instead of randomising them to build out the weekly dinner plan</p>
-    <p> * Searching and Sorting 'Dinner' objects on All Dinners Page.</p>            
-    <p> * Add controls to allow users to specify how they want the dinners filtered when randomising.</p>
-    <p> * Add more to the preloaded dinners.</p>
-    <p> * Ability to create custome meal plan that is longer or shorter than a week. User can add as many days as they want and have dinners selected for               each day</p>
-  </p>
+    <li> * Individually selecting specific dinners instead of randomising them to build out the weekly dinner plan</li>
+    <li> * Searching and Sorting 'Dinner' objects on All Dinners Page.</li>            
+    <li> * Add controls to allow users to specify how they want the dinners filtered when randomising.</li>
+    <li> * Add more to the preloaded dinners.</li>
+    <li> * Ability to create custome meal plan that is longer or shorter than a week. User can add as many days as they want and have dinners selected for              each day</li>
+  <ul>
 </div>
 
 
